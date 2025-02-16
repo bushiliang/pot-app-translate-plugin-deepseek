@@ -2,10 +2,17 @@ async function translate(text, from, to, options) {
     const { config, utils } = options;
     const { tauriFetch: fetch } = utils;
     
-    let { apiKey, model = "deepseek-chat" } = config;
+    let { 
+        apiEndpoint = "https://api.deepseek.com/chat/completions", 
+        model = "deepseek-chat",
+        apiKey,
+        temperature = 0.1,
+        top_p = 0.99,
+        max_tokens = 2000
+    } = config;
     
     // 设置默认请求路径
-    const requestPath = "https://api.deepseek.com/chat/completions";
+    // const requestPath = "https://api.deepseek.com/chat/completions";
     
     const headers = {
         'Content-Type': 'application/json',
@@ -24,16 +31,16 @@ async function translate(text, from, to, options) {
                 "content": `Translate into ${to}:\n${text}`
             }
         ],
-        temperature: 0.1,
-        top_p: 0.99,
+        temperature: Number(temperature),
+        top_p: Number(top_p),
         frequency_penalty: 0,
         presence_penalty: 0,
-        max_tokens: 2000
+        max_tokens: Number(max_tokens)
     }
     
-    let res = await fetch(requestPath, {
+    let res = await fetch(apiEndpoint, {
         method: 'POST',
-        url: requestPath,
+        url: apiEndpoint,
         headers: headers,
         body: {
             type: "Json",

@@ -6,19 +6,62 @@
   "homepage": "https://github.com/tzulao55/pot-app-translate-plugin-deepseek",
   "needs": [
     {
+      "key": "apiEndpoint",
+      "display": "API地址(可选)",
+      "type": "input",
+      "default": "https://api.deepseek.com/chat/completions",
+      "attrs": {
+        "placeholder": "https://api.deepseek.com/chat/completions"
+      }
+    },
+    {
       "key": "model",
-      "display": "模型选择",
-      "type": "select",
-      "options": {
-        "deepseek-chat": "deepseek-chat",
-        "deepseek-reasoner": "deepseek-reasoner"
-      },
-      "default": "deepseek-chat"
+      "display": "模型选择(可选)",
+      "type": "input",
+      "default": "deepseek-chat",
+      "attrs": {
+        "placeholder": "deepseek-chat"
+      }
     },
     {
       "key": "apiKey",
-      "display": "API密钥",
+      "display": "API密钥(必填)",
       "type": "input"
+    },
+    {
+      "key": "temperature",
+      "display": "temperature(可选)",
+      "type": "input",
+      "min": 0,
+      "max": 2,
+      "step": 0.1,
+      "default": 0.1,
+      "attrs": {
+        "placeholder": "0.1"
+      }
+    },
+    {
+      "key": "top_p",
+      "display": "top_p(可选)",
+      "type": "input",
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "default": 0.99,
+      "attrs": {
+        "placeholder": "0.99"
+      }
+    },
+    {
+      "key": "max_tokens",
+      "display": "max_tokens(可选)",
+      "type": "input",
+      "min": 100,
+      "max": 4000,
+      "default": 2000,
+      "attrs": {
+        "placeholder": "2000"
+      }
     }
   ],
   "language": {
