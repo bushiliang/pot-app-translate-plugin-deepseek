@@ -1,16 +1,16 @@
-# pot-app-translate-plugin-deepseek
+# pot-app-translate-plugin-SiliconFlow
 
-DeepSeek翻译插件 - 一个为pot-app开发的翻译插件
+SiliconFlow翻译插件 - 一个为pot-app开发的翻译插件
 
 ## 简介
-这是一个基于DeepSeek API的翻译插件，支持多语言翻译，提供高质量的翻译结果。
+这是一个基于SiliconFlow API的翻译插件，支持多语言翻译，提供高质量的翻译结果。
 
 ## 前置要求
 - [pot-app](https://github.com/pot-app/pot-app) - 请先下载并安装pot-app
-- [deepseek API开放平台](https://platform.deepseek.com/usage)- 需要在DeepSeek官网申请API密钥
+- [deepseek API开放平台](https://platform.deepseek.com/usage)- 需要在SiliconFlow官网申请API密钥
 
 ## 功能特点
-- 支持两种模型选择：deepseek-chat和deepseek-reasoner
+- 支持多种模型选择：推荐使用Qwen2-7B-Instruct版本，响应速度极快，其他的模型例如deepseek-v3速度需要数秒才能响应
 - 支持多种语言之间的互译
 - 提供专业、流畅的翻译结果
 
@@ -21,11 +21,11 @@ DeepSeek翻译插件 - 一个为pot-app开发的翻译插件
 4. 选择本插件的发布包进行安装
 
 ## 配置说明
-1. 选择翻译模型（deepseek-chat或deepseek-reasoner）
-2. 输入你的DeepSeek API密钥
+1. 选择翻译模型
+2. 输入你的SiliconFlow API密钥
 
 ## 使用说明
-安装并配置完成后，在pot-app的翻译引擎列表中选择"DeepSeek"即可使用。
+安装并配置完成后，在pot-app的翻译引擎列表中选择"SiliconFlow"即可使用。
 
 ## 注意事项
 - 请妥善保管你的API密钥
